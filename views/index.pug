@@ -1,28 +1,30 @@
 extends layout
 
 block content
-  header.cabeza
-    i(class="fas fa-tree")
-    h1 Administrador de Canales de youtube
-  form(action="", method="post", class= "formulario")
-    input(type="text", name="nombre",class="espacio", id="campo1", placeholder="Campo1")
-    input(type="text", name="temas",class="espacio", id="campo2", placeholder="Campo2")
-    input(type="text", name="seguidores",class="espacio", id="campo3", placeholder="Campo3")
-    input(type="submit", value="Guardar")
-  div.tabla
-    thead
-      tr
-        td Id
-        td Nombre
-        td Tematica
-        td Seguidores
-    tbody
-      tr
-        td 1
-        td theodd1sout
-        td Animacion
-        td 8 millones
-
+  div.contenedor
+    header.cabeza
+      i(class="fas fa-tree")
+      h1 Administrador de Canales de youtube
+    form(action="", method="post", class= "formulario")
+      input(type="text", name="nombre",class="espacio", id="campo1", placeholder="Campo1")
+      input(type="text", name="temas",class="espacio", id="campo2", placeholder="Campo2")
+      input(type="text", name="seguidores",class="espacio", id="campo3", placeholder="Campo3")
+      input(type="submit", value="Guardar")
+    table.tabla
+      thead
+        tr
+          th Id
+          th Nombre
+          th Tematica
+          th Seguidores
+          th Opciones
+      tbody
+        tr
+          td 1
+          td theodd1sout
+          td Animacion
+          td 8 millones
+          td <i class="fas fa-pencil-alt"></i> 
   
 
 

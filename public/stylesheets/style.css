@@ -1,8 +1,81 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.contenedor{
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+  "header"
+  "formulario"
+  "tabla"
+}
+
+.cabeza{
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  background-color: rgb(255, 234, 180);
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  font-size: 0.8rem;
+}
+
+.cabeza i{
+  font-size: 2rem;
+}
+
+.cabeza h1{
+  font-family: 'Unlock', cursive;
+  padding-left: 1em;
+}
+
+.formulario{
+  grid-area: formulario;
+  background-color: rgb(233, 233, 233);
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tabla{
+  grid-area: tabla;
+  font-size: 1.5rem;
+}
+
+.tabla tr{
+  border: 1px solid rgb(179, 174, 174);
+}
+
+.tabla th, .tabla td{
+  padding: 1.5em;
+}
+
+.tabla th{
+  background-color: rgb(158, 215, 238);
+}
+
+.tabla td{
+  background-color: rgb(250, 245, 245);
+}
+
+@media only screen and (max-width: 767px) {
+  .contenedor{
+    display: grid;
+    width: 100%;
+  }
 }
