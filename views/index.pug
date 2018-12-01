@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  header.cabeza
+    i(class="fas fa-tree")
+    h1 Administrador de Canales de youtube
+  form(action="", method="post", class= "formulario")
+    input(type="text", name="campo1",class="espacio", id="campo1", placeholder="Campo1")
+    input(type="text", name="campo1",class="espacio", id="campo2", placeholder="Campo2")
+    input(type="text", name="campo1",class="espacio", id="campo3", placeholder="Campo3")
+    input(type="submit", value="Guardar")
+  div.tabla
+    thead
+      tr
+        td Id
+        td Nombre
+        td Tematica
+        td Seguidores
+    tbody
+      tr
+        td 1
+        td theodd1sout
+        td Animacion
+        td 8 millones
+
+  
+
+
