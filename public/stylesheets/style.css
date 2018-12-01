@@ -31,10 +31,13 @@ a {
   padding-bottom: 0.7rem;
   padding-top: 0.7rem;
   font-size: 0.8rem;
+  color: rgb(98, 102, 104);
 }
 
 .cabeza i{
   font-size: 2rem;
+  padding-left: 1em;
+  color: rgb(231, 79, 79);
 }
 
 .cabeza h1{
