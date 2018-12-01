@@ -18,17 +18,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '../public'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+});
+
+// Start server
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
 
 // error handler
@@ -40,6 +43,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.get('/', function (req, res) {
+  res.render('index', { title: 'Hey', message: 'Hello there!'});
 });
 
 module.exports = app;
