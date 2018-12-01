@@ -9,9 +9,9 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next){
   let youtuber = {
     id: req.paramas.id,
-    nombre: req.body.name,
+    name: req.body.name,
     tema: req.body.tema,
-
+    seguidores: req.body.seguidores
   }
   youtuber.save();
   res.status(200).json({
