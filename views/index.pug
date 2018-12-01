@@ -6,15 +6,15 @@ block content
       i(class="fas fa-tree")
       h1 Administrador de Canales de youtube
     form(action="", method="post", class= "formulario")
-      input(type="text", name="nombre",class="espacio", id="campo1", placeholder="Campo1")
-      input(type="text", name="temas",class="espacio", id="campo2", placeholder="Campo2")
-      input(type="text", name="seguidores",class="espacio", id="campo3", placeholder="Campo3")
+      input(type="text", name="nombre",class="espacio", id="campo1", placeholder="Nombre")
+      input(type="text", name="temas",class="espacio", id="campo2", placeholder="Tematica")
+      input(type="text", name="seguidores",class="espacio", id="campo3", placeholder="Seguidores")
       input(type="submit", value="Guardar")
     table.tabla
       thead
         tr
           th Id
-          th Nombre
+          th Canal
           th Tematica
           th Seguidores
           th Opciones
@@ -34,6 +34,26 @@ block content
           td Shane Dawson
           td Conspiracion, Documental
           td 19594455 
+          td.iconos 
+            center
+              i(class="fas fa-pencil-alt") 
+              i(class="fas fa-minus-circle")
+              i(class="fas fa-times-circle")
+        tr
+          td 3
+          td Sssniperwolf
+          td Reacciones, Gameplays
+          td 12094455 
+          td.iconos 
+            center
+              i(class="fas fa-pencil-alt") 
+              i(class="fas fa-minus-circle")
+              i(class="fas fa-times-circle")
+        tr
+          td 4
+          td JaidenAnimations
+          td Animacion
+          td 7094455 
           td.iconos 
             center
               i(class="fas fa-pencil-alt") 
